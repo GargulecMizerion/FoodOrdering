@@ -13,7 +13,6 @@ public class RestaurantDto {
 
     private String title;
 
-    @ElementCollection
     @Column(length = 1000) // URL moze byc dlugi
     public List<String> images;
 

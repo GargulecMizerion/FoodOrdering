@@ -1,6 +1,7 @@
 package com.kayman.backend.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class Category {
 
     private String name;
 
-
-   // private Restaurant restaurant;
+    @ManyToOne
+    @JsonIgnore
+    private Restaurant restaurant;
 }
